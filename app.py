@@ -1,14 +1,11 @@
-import os
 from flask import Flask, request, jsonify
-from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-import openai
+
+from LLMClients.LLMClientFactory import LLMClientFactory
 
 load_dotenv()
 
 app = Flask(__name__)
-
-api_key = os.getenv("OPENAI_API_KEY")
 
 valid_vendors = ["VendorA", "VendorB", "VendorC"]
 
@@ -40,14 +37,17 @@ def generate_text():
     if( validation['is_valid'] == False ):
         return jsonify({"errors": validation['errors']}), 400
 
-    llm = ChatOpenAI(openai_api_key=api_key, model_name=model_identifier)
+    client = LLMClientFactory.CreateClient("OPEN_AI", {"model_name": model_identifier})
+
+    response = client.query(prompt_text)
 
     try:
-        response = llm.invoke(prompt_text)
-    except openai.APIError as error:
-        return jsonify({"errors": [error.body]}), error.status_code
+        response = client.query(prompt_text)
     except Exception as e:
         return jsonify({"errors": ["Something went wrong"]}), 500
+    
+    if len(response.errors) > 0:
+        return jsonify({"errors": response.errors}), response.status_code
     
     return jsonify({'data': response.content})
 
