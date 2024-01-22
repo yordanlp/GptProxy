@@ -31,7 +31,7 @@ create a copy of .env.example file and rename it to .env and fill it with your O
 
  #### Step  7: Run the application
  ```
-./env/Scripts/python.exe run.py
+./env/Scripts/python.exe app.py
  ```
 ---
 
