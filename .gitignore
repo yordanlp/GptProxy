@@ -1,0 +1,136 @@
+# Virtual Environment
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local configuration file (if it exists and is still being used)
+instance/
+
+# Environment variables file
+.env
+
+# Compiled source
+*.mo
+*.pot
+
+# Translations
+translations/
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Flask debugging logs
+instance/logs/
+
+# IDE files
+.vscode/
+.idea/
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+# Automatically created by the framework
+__pycache__/
+*.pyc
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# virtualenv
+venv/
+ENV/
+env/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pyflow
+.flowconfig
+
+# Standard code style configuration files
+.ansible-lint
+.style.yapf
+.stylelintignore
+.stylelintrc
+.editorconfig
+
+# Visual Studio Code directories
+.vscode/
+.history/
+
+# Sublime Text directories
+.sublime-project
+.sublime-workspace
