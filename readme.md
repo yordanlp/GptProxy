@@ -56,9 +56,9 @@ if you make a validation error or provide an invalid parameter for OpenAI api yo
 
 ```
 {
-    "vendor": "VendorX",
-    "model_identifier": "gpt-3.5-turbo-0301",
-    "prompt_text": "Hi"
+    "errors": [
+        "The vendor provided is not valid"
+    ]
 }
 ```
 
